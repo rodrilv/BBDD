@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="stylesheet" type="text/css" href="estilo.css">
+	   <link rel="stylesheet" type="text/css" href="css/estilos.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+	  <title>BASE DE DATOS</title>
+    </head>
+       
+      <label class="titulo">Customers</label>
+      <div class="formulario">
+      <div class = "dropdown column "><span><h2>Register</h2></span><div class = "dropdown-content">
+      <div class="input">
+      Address:<input class="form-control type="text" name="address"></input>
+      City:<input class="form-control type="text" name="city"></input>
+      Country:<input class="form-control type="text" name="country"></input>
+      District:<input class="form-control type="text" name="district"></input>
+      First Name:<input class="form-control type="text" name="fname"></input>
+      Last Name:<input class="form-control type="text" name="lname"></input>
+      <label>Status (Active/Inactive)</label>
+      <select class="form-control">
+      <option>Active</option>
+      <option>Inactive</option></select><p>
+      <div class="psn">
+      <button type="submit" class="btn btn-secondary ">Register</button></div>
+      </div></div></div>
+      </div>
+
+      <div class="formulario2">
+      <div class = "dropdown column "><span><h2>Delete</h2></span><div class = "dropdown-content">
+      <div class="input">
+      Id:<input class="form-control type="text" name="id"></input><br>
+      <button type="submit" class="btn btn-secondary ">Delete</button></div>
+      </div></a></div></div>
+      </div>
+       <div class="formulario3">
+      <div class = "dropdown column "><span><h2>Search</h2></span><div class = "dropdown-content">
+      <div class="input">
+      Id:<input class="form-control type="text" name="id"></input>
+      Name:<input class="form-control type="text" name="name"></input>
+      Country:<input class="form-control type="text" name="country"></input><br>
+      <button type="submit" class="btn btn-secondary ">Search</button></div>
+      </div></a></div></div>
+      </div>
+
+<body>
+<form method="POST" action="database.php">
+<table class="table table-active table-bordered tabla">
+  <thead>
+    <tr>
+      <th scope="ccol">Id</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">Country</th>
+      <th scope="col">District</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Status (Active/Inactive)</th>
+    </tr>
+  </thead>
+  <tbody>
+		</body>  
+</form>
+</html>

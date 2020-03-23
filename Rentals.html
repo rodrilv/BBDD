@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+    <title>Rentals</title>
+    </head>
+       
+      <label class="titulo">Rentals</label>
+      <div class="formulario">
+      <div class = "dropdown column "><span><h2>Register</h2></span><div class = "dropdown-content">
+      <div class="input">
+      ID_customer:<input class="form-control type="text" name="id_customer"></input>
+      ID_property:<input class="form-control type="text" name="id_property"></input><br>
+      <button type="submit" class="btn btn-secondary ">Register</button></div>
+      </div><a></div></div>
+      </div>
+
+      <!-- TE DEJO ESTO AUNQUE ESTE MAL , POS SABE, PARA HACERTE EL COSO DE HTML EN PHP-->
+      <?php
+      include("conexion.php");
+      error_reporting(0);
+      $id_customer = $_POST["customer"];
+      $id_property = $_POST["id_property"];
+     
+
+      ?>
+<div>
+<body>
+<form method="POST" action="database.php">
+  <thead>
+    <tr>
+      <div id="contenedor">
+      <table class="table-active table-bordered tabla2">
+      <th scope="ccol">ID_property</th>
+      <th scope="col">Property Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Host Name</th>
+      <th scope="col">District</th>
+  </thead></div>
+  </body>
+    <body>
+  <thead>
+    <tr>
+     <div id="contenedor">
+      <table class=" table-active table-bordered tabla3">
+      <th scope="ccol">ID_customer</th>
+      <th scope="col">Name</th>
+      <th scope="col">ID_rented property</th>
+      <th scope="col">Date</th>
+  </thead>
+ <body>
+  <thead></div>
+</form>
+</html>

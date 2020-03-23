@@ -1,0 +1,82 @@
+---------------------------------------ESTRUCTURA Clients COLLECTION----------------------------------------------
+
+db.createCollection('Clients', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: [
+        'Firstname',
+        'Lastname',
+        'Country',
+        'City',
+        'District'
+        'Address',
+        'Status'
+      ],
+      properties: {
+        _id: {
+          bsonType: 'int',
+          description: 'auto increments, no required and no need to ask for it'
+        },
+        Firstname: {
+          bsonType: 'string',
+          description: 'must be a string and is required'
+        },
+
+        Lastname: {
+          bsonType: 'string',
+          description: 'must be a string and is required'
+        },
+        Country: {
+          bsonType: 'string',
+          description: 'must be a country string and is required'
+        },
+        City: {
+          bsonType: 'string',
+          description: 'must be a country string and is required'
+        },
+        District: {
+          bsonType: 'string',
+          description: 'must be a district value string and is required'
+        },
+        Rented_properties: {
+          bsonType: 'object',
+          required: ['property_id'],
+          properties: {
+            property_id: { 
+              bsonType: 'int',
+              description: 'the id of the property'
+            },
+            property_name: {
+              bsonType: 'string',
+              description: 'name of rented property'
+            }
+          }
+        },
+        Address: {
+          bsonType: 'object',
+          required: ['street'],
+          properties: {
+            street: {
+              bsonType: 'string',
+              description: 'must be a string if the field exists'
+            },
+            InNumb: {
+              bsonType: 'string',
+              description: 'must be a string and is required'
+            },
+            ExtNumb: {
+              bsonType: 'string',
+              description: 'must be a string and is required'
+            }
+          }
+        },
+        Status:{
+          bsonType:'string',
+          description:'can be used to activate or deactivate clients'
+        }
+      }
+    }
+  },
+  validatorAction:"warn"
+});
